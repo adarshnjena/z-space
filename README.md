@@ -13,8 +13,8 @@ All the users will be able to log in to a world that they choose, and thus will 
 > - Character customisation.
 
 ## Feedback
- - Ask a [question]()
- - Suggest a [new feature]()
+ - Ask a [question](https://www.linkedin.com/in/sidd0203/)
+ - Suggest a [new feature](https://www.linkedin.com/in/sidd0203/)
  - Report an [issue](https://github.com/adarshnjena/z-space/issues/new)
 
 # Team Members:
