@@ -1,8 +1,7 @@
 "use client"; // this is a client component 👈🏽
-import styles from "../styles/home.module.css";
+import styles from "../styles/Home.module.css";
 import Auth from "../components/auth";
 import { useRef } from "react";
-
 
 export default function Home() {
   const pointerRef = useRef();
