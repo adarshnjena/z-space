@@ -15,7 +15,7 @@ All the users will be able to log in to a world that they choose, and thus will 
 ## Feedback
  - Ask a [question]()
  - Suggest a [new feature]()
- - Report an [issue]()
+ - Report an [issue](https://github.com/adarshnjena/z-space/issues/new)
 
 # Team Members:
   - [Siddhant Patil](https://github.com/Siddhant-Patil0203) (Team Lead)
