@@ -1,6 +1,7 @@
 "use client"; // this is a client component 👈🏽
 import { useRef } from "react";
 import style from "../styles/auth.module.css";
+import { useRouter } from "next/router";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Auth() {
@@ -8,6 +9,7 @@ export default function Auth() {
   const cards = useRef([]);
   const pushRef = (el) => cards.current.push(el);
   const playerRef = useRef();
+  const router = useRouter();
   return (
     <div className={style.auth}>
       <div
@@ -41,7 +43,13 @@ export default function Auth() {
             </p>
           </div>
         </div>
-        <div className={style.card} ref={pushRef}>
+        <div
+          className={style.card}
+          ref={pushRef}
+          onClick={() => {
+            router.push("/configChar", undefined, { shallow: true });
+          }}
+        >
           <div className={style.cardBorder}></div>
           <div className={style.cardContent}>
             <div className={style.cardTitle}>Play as a Guest</div>
