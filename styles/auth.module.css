@@ -1,0 +1,110 @@
+.auth{
+    height: 80vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: none;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    cursor: none;
+}
+
+.card{
+    height: 460px;
+    width: 340px;
+    border-radius: 10px;
+    background-color: rgba(225, 225, 225, 0.1);
+    position: relative;
+    cursor: none;
+
+}
+
+
+.card::before, 
+.cardBorder{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.7s;
+    cursor: none;
+}
+
+.card::before{
+    background:radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.cardBorder{
+    background:radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.3),
+        transparent 40%
+    );
+    z-index: 1;
+    height: 460px;
+    width: 340px;
+}
+
+.card:hover::before,.cards:hover .cardBorder{
+    opacity: 1;
+}
+
+
+
+.cardContent{
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    background-color: rgb(23, 23, 23);
+    margin: 1px;
+    z-index: 2;
+    border-radius: inherit;
+    position: relative;
+}
+  
+  .cardContent::after {
+    background: var(--primary-glow);
+    width:240px;
+    height: 180px;
+    z-index: -1;
+    margin-left: 350px;
+  }
+
+  .cardContent::before,
+.cardContent::after {
+  content: '';
+  left: -90%;
+  position: absolute;
+  filter: blur(60px);
+  transform: translateZ(0);
+}
+
+.cardTitle{
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    font-size: 1rem;
+    max-width: var(--main-width);
+    width: 100%;
+    z-index: 2;
+    font-family: var(--font-mono);
+}

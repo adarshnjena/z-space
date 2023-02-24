@@ -1,4 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
+  --main-width: 90vw;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -93,6 +99,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    cursor: none;
 }
 
 a {
@@ -105,3 +112,41 @@ a {
     color-scheme: dark;
   }
 }
+
+.pointer {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 100px;
+  left: 100px;
+  border-radius: 50%;
+  background: linear-gradient(#00FF00, #00FF00, #00FF00);
+  animation: animate 1s linear infinite;
+  z-index: 100;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.pointer span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(#00b2ff, #00ffbb, #6bff6b);
+}
+
+.pointer span:nth-child(1) {
+  filter: blur(5px);
+}
+
+.pointer span:nth-child(2) {
+  filter: blur(10px);
+}
+
