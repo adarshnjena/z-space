@@ -6,7 +6,6 @@ import { Player } from "@lottiefiles/react-lottie-player";
 const world = () => {
   useEffect(() => {
     setTimeout(() => {
-      if (!user) router.push("/");
       setLoading(false);
     }, 5000);
   }, []);
