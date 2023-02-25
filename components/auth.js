@@ -26,7 +26,13 @@ export default function Auth() {
           }
         }}
       >
-        <div className={style.card} ref={pushRef}>
+        <div
+          className={style.card}
+          ref={pushRef}
+          onClick={() => {
+            router.push("/world", undefined, { shallow: true });
+          }}
+        >
           <div className={style.cardBorder}></div>
           <div className={style.cardContent}>
             <div className={style.cardTitle}>Login via account</div>
@@ -47,7 +53,7 @@ export default function Auth() {
           className={style.card}
           ref={pushRef}
           onClick={() => {
-            router.push("/configChar", undefined, { shallow: true });
+            router.push("/world", undefined, { shallow: true });
           }}
         >
           <div className={style.cardBorder}></div>
