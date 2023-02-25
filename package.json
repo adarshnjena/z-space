@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.2",
+    "@react-three/drei": "^9.56.27",
+    "@react-three/fiber": "^8.11.5",
+    "@react-three/gltfjsx": "^4.3.4",
+    "@types/three": "^0.149.0",
     "eslint": "8.34.0",
     "eslint-config-next": "13.2.1",
     "next": "13.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "three": "^0.150.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
