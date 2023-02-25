@@ -2,9 +2,11 @@
 import styles from "../styles/Home.module.css";
 import Auth from "../components/auth";
 import { useRef } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const pointerRef = useRef();
+  const router = useRouter();
   return (
     <body
       onMouseMove={(e) => {
@@ -16,6 +18,14 @@ export default function Home() {
         <div className={styles.description}>
           <div className={styles.center}>
             <div className={styles.thirteen}>Z-Space</div>
+          </div>
+          <div
+            className={styles.center}
+            onClick={() => {
+              router.push("http://zspace2d.vercel.app");
+            }}
+          >
+            <div className={styles.thirteen}>Z-Space 2D</div>
           </div>
         </div>
         <Auth />
