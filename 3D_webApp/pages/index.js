@@ -3,8 +3,10 @@ import styles from "../styles/Home.module.css";
 import Auth from "../components/auth";
 import { useRef } from "react";
 import { useRouter } from "next/router";
+import { initFirebase } from "@/firebase/FirebaseApp";
 
 export default function Home() {
+  const app = initFirebase();
   const pointerRef = useRef();
   const router = useRouter();
   return (
