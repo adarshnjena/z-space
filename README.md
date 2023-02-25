@@ -1,7 +1,7 @@
 # Z-Space
 
 We aim to innovate the social interaction by contributing in the category of social media of the future.
-We're a team of enthusiasts hoping to bring fun to social interactions with our innovation.
+We're a team of enthusiasts hoping to bring fun to social interactions with our innovation
 
 
 ## Project Overview
